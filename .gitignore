@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+.svelte-kit/
+**/.svelte-kit/
+build/
+**/build/
+dist/
+**/dist/
+coverage/
+**/coverage/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Local database files
+*.sqlite
+*.sqlite3
+*.db
+
+# Local database directory
+/data/*
+!/data/.gitkeep
+
+# Logs
+*.log
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
