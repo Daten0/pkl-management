@@ -1,0 +1,34 @@
+{
+  "lockfileVersion": 2,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "pkl-management",
+    },
+    "apps/api": {
+      "name": "@pkl/api",
+      "version": "0.1.0",
+      "dependencies": {
+        "@pkl/contracts": "workspace:*",
+      },
+    },
+    "apps/web": {
+      "name": "@pkl/web",
+      "version": "0.1.0",
+      "dependencies": {
+        "@pkl/contracts": "workspace:*",
+      },
+    },
+    "packages/contracts": {
+      "name": "@pkl/contracts",
+      "version": "0.1.0",
+    },
+  },
+  "packages": {
+    "@pkl/api": ["@pkl/api@workspace:apps/api"],
+
+    "@pkl/contracts": ["@pkl/contracts@workspace:packages/contracts"],
+
+    "@pkl/web": ["@pkl/web@workspace:apps/web"],
+  }
+}
