@@ -1,0 +1,29 @@
+<!-- src/routes/admin/+layout.svelte -->
+<script>
+	import Sidebar from '#lib/components/admin/sidebar.svelte';
+	import Header from '#lib/components/admin/header.svelte';
+	// Meminjam Footer dari komponen utama
+	import Footer from '#lib/components/footer.svelte'; 
+
+	let { children } = $props();
+	
+	let isSidebarOpen = $state(true);
+
+	function toggleSidebar() {
+		isSidebarOpen = !isSidebarOpen;
+	}
+</script>
+
+<div class="flex h-screen w-full bg-[#f4ebe1] font-sans overflow-hidden">
+	<Sidebar isOpen={isSidebarOpen} />
+
+	<div class="flex-1 flex flex-col h-full overflow-hidden relative">
+		<Header onToggle={toggleSidebar} />
+
+		<main class="flex-1 overflow-y-auto p-6">
+			{@render children()}
+		</main>
+
+		<Footer />
+	</div>
+</div>
