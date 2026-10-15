@@ -15,13 +15,13 @@
 
 	<form onsubmit={(e) => { e.preventDefault(); handleLogin(); }} class="space-y-5">
 		<div class="space-y-1.5">
-			<label for="username" class="block text-sm font-semibold text-slate-700">Username</label>
+			<label for="username" class="block text-sm font-semibold text-slate-700">Nama Lengkap / NIS</label>
 			<input
 				id="username"
 				type="text"
 				bind:value={username}
 				class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-500/40 focus:border-orange-500 transition"
-				placeholder="Masukkan username"
+				placeholder="Masukkan Nama Lengkap atau NIS/NISN!"
 			/>
 		</div>
 
