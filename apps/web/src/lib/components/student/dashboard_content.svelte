@@ -1,11 +1,11 @@
 <!-- src/lib/components/DashboardContent.svelte -->
 <script>
 	const progressSteps = [
-		{ title: 'Pendaftaran', status: 'completed', date: '10 Ags 2026' },
-		{ title: 'Pembekalan', status: 'completed', date: '15 Ags 2026' },
+		{ title: 'Penentuan Kelompok', status: 'completed', date: '10 Ags 2026' },
+		{ title: 'Memilih Lokasi PKL', status: 'completed', date: '15 Ags 2026' },
 		{ title: 'Pelaksanaan PKL', status: 'current', date: 'Sedang Berlangsung' },
-		{ title: 'Penarikan', status: 'pending', date: 'Belum dimulai' },
-		{ title: 'Laporan Akhir', status: 'pending', date: 'Belum dimulai' }
+		{ title: 'Selesai PKL', status: 'pending', date: 'Belum' },
+		{ title: 'Penerbitan Nilai', status: 'pending', date: 'Belum' }
 	];
 </script>
 
