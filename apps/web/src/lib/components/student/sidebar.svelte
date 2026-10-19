@@ -1,5 +1,5 @@
 <!-- src/lib/components/Sidebar.svelte -->
-<script>
+<script lang="ts">
 	let { isOpen } = $props();
 
 	const menus = [
@@ -8,6 +8,7 @@
 		{ name: 'Presensi', icon: '📝' },
 		{ name: 'Logbook', icon: '📖' },
 		{ name: 'Upload Berkas', icon: '📁' },
+		{ name: 'Lihat Nilai', icon: '⭐' },
 		{ name: 'Profil Pengguna', icon: '👤' }
 	];
 </script>
