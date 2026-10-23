@@ -13,6 +13,7 @@
     const menus = [
         { name: 'Dashboard', icon: '📊', href: '#' },
         { name: 'Data Mitra DUDI', icon: '🏢', href: '#' },
+        { name: 'Program Keahlian', icon: '🎓', href: '#' },
         { 
             name: 'Data Akun', 
             icon: '👥',
