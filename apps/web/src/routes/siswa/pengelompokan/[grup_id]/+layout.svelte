@@ -2,7 +2,7 @@
 	import Sidebar from '#lib/components/student/sidebar.svelte';
 	import Header from '#lib/components/student/header.svelte';
 	import Footer from '#lib/components/footer.svelte';
-	import { sidebarState, toggleSidebar } from '#lib/state/sidebar.svelte.ts';
+	import { sidebarState, toggleSidebar } from '#lib/state/student/sidebar.svelte.ts';
 
 	let { children } = $props();
 	const toggle = () => toggleSidebar('student');

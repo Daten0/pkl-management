@@ -5,7 +5,7 @@
 	const menus = [
 		{ name: 'Dashboard', icon: '📊', href: '/siswa/dashboard' },
 		{ name: 'Pengelompokan', icon: '👥', href: '/siswa/pengelompokan/create' },
-		{ name: 'Presensi', icon: '📝', href: '#' },
+		{ name: 'Presensi', icon: '📝', href: '/siswa/presensi' },
 		{ name: 'Logbook', icon: '📖', href: '#' },
 		{ name: 'Upload Berkas', icon: '📁', href: '#' },
 		{ name: 'Lihat Nilai', icon: '⭐', href: '#' },

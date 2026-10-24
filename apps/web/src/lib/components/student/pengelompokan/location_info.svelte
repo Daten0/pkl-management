@@ -1,6 +1,6 @@
 <script lang="ts">
 	import MitraModal from './mitra_modal.svelte';
-	import type { MitraPkl } from '#lib/types/mitra.ts';
+	import type { MitraPkl } from '#lib/types/student/mitra.ts';
 
 	let {
 		selectedLocation = $bindable<MitraPkl | null>(null),

@@ -4,7 +4,7 @@
 	import Header from '#lib/components/teacher/header.svelte';
 	// Meminjam Footer dari komponen utama yang sudah dibuat sebelumnya
 	import Footer from '#lib/components/footer.svelte'; 
-	import { sidebarState, toggleSidebar } from '#lib/state/sidebar.svelte.ts';
+	import { sidebarState, toggleSidebar } from '#lib/state/student/sidebar.svelte.ts';
 
 	let { children } = $props();
 	const toggle = () => toggleSidebar('teacher');

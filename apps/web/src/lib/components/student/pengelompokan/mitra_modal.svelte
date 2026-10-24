@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { MitraPkl } from '#lib/types/mitra.ts';
+	import type { MitraPkl } from '#lib/types/student/mitra.ts';
 
 	let {
 		mitraList,

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { MemberStatus, type Member, type Student } from '#lib/types/member.ts';
+	import { MemberStatus, type Member, type Student } from '#lib/types/student/member.ts';
 
 	let { 
 		groupMembers = $bindable<Member[]>([]), 

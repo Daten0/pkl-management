@@ -3,8 +3,8 @@
 	import LocationInfo from '#lib/components/student/pengelompokan/location_info.svelte';
     import GroupMembers from '#lib/components/student/pengelompokan/member_kelompok.svelte';
     import StudentModal from '#lib/components/student/pengelompokan/siswa_modal.svelte';
-    import type { MitraPkl } from '#lib/types/mitra.ts';
-    import type { Member, Student } from '#lib/types/member.ts';
+    import type { MitraPkl } from '#lib/types/student/mitra.ts';
+    import type { Member, Student } from '#lib/types/student/member.ts';
 
 	// Parent State
 	let selectedLocation = $state<MitraPkl | null>(null);
