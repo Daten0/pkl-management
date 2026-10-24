@@ -4,11 +4,11 @@
 
 	// Menu khusus Guru Pembimbing
 	const menus = [
-		{ name: 'Dashboard', icon: '📊' },
-		{ name: 'Kelompok PKL', icon: '👥' },
-		{ name: 'Data Siswa', icon: '👨‍🎓' },
-		{ name: 'Penilaian', icon: '⭐' },
-		{ name: 'Profil Guru', icon: '👨‍🏫' }
+		{ name: 'Dashboard', icon: '📊', href: '/guru/dashboard' },
+		{ name: 'Kelompok PKL', icon: '👥', href: '#' },
+		{ name: 'Data Siswa', icon: '👨‍🎓', href: '#' },
+		{ name: 'Penilaian', icon: '⭐', href: '#' },
+		{ name: 'Profil Guru', icon: '👨‍🏫', href: '#' }
 	];
 </script>
 
@@ -23,7 +23,7 @@
 			{#each menus as menu}
 				<li>
 					<a 
-						href="#" 
+						href={menu.href} 
 						class="flex items-center gap-3 px-4 py-3 rounded-lg text-[#6f4e37] font-medium transition-colors duration-200 hover:bg-orange-500 hover:text-white group"
 					>
 						<span class="text-lg">{menu.icon}</span>

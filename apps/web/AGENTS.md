@@ -48,6 +48,11 @@ Use this palette only for the authentication split-screen.
 - `+page.svelte` should only contain content; never duplicate layout chrome (sidebar/header/footer).
 - Auth routes (`login`) use split-screen without sidebar; no `+layout.svelte` inheritance required unless explicitly designed.
 - All components imported via `#lib/components/student/...` alias.
+- Sidebar open/close state must use the shared module in `src/lib/state/sidebar.svelte.ts`:
+  - Student layouts use `sidebarState.student` and `toggleSidebar('student')`.
+  - Teacher layouts use `sidebarState.teacher` and `toggleSidebar('teacher')`.
+  - Admin layouts use `sidebarState.admin` and `toggleSidebar('admin')`.
+  - Do not create local `$state` for sidebar open/close in route layouts.
 
 ## 4. Component Color Mapping (review from existing files)
 - `Sidebar`: `bg-white`, `border-r border-[#e6d9cc]`, title `text-orange-500`, links `text-[#6f4e37]`.
@@ -60,6 +65,7 @@ Use this palette only for the authentication split-screen.
 - [ ] Route folder exists under `src/routes/siswa/`
 - [ ] `+page.svelte` exists
 - [ ] If student content: `+layout.svelte` exists with Sidebar/Header/Footer and `bg-[#f4ebe1]`
+- [ ] Sidebar state uses `#lib/state/sidebar.svelte.ts` with the correct role key
 - [ ] Color class matches Palette A (post-login) or Palette B (auth)
 - [ ] Component type assigned (Layout / Page / Shared / Auth / Form / Content)
 - [ ] Imports use `#lib/components/student/` alias

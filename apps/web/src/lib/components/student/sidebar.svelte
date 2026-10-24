@@ -3,13 +3,13 @@
 	let { isOpen } = $props();
 
 	const menus = [
-		{ name: 'Dashboard', icon: '📊' },
-		{ name: 'Pengelompokan', icon: '👥' },
-		{ name: 'Presensi', icon: '📝' },
-		{ name: 'Logbook', icon: '📖' },
-		{ name: 'Upload Berkas', icon: '📁' },
-		{ name: 'Lihat Nilai', icon: '⭐' },
-		{ name: 'Profil Pengguna', icon: '👤' }
+		{ name: 'Dashboard', icon: '📊', href: '/siswa/dashboard' },
+		{ name: 'Pengelompokan', icon: '👥', href: '/siswa/pengelompokan/create' },
+		{ name: 'Presensi', icon: '📝', href: '#' },
+		{ name: 'Logbook', icon: '📖', href: '#' },
+		{ name: 'Upload Berkas', icon: '📁', href: '#' },
+		{ name: 'Lihat Nilai', icon: '⭐', href: '#' },
+		{ name: 'Profil Pengguna', icon: '👤', href: '#' }
 	];
 </script>
 
@@ -24,7 +24,7 @@
 			{#each menus as menu}
 				<li>
 					<a 
-						href="#" 
+						href={menu.href} 
 						class="flex items-center gap-3 px-4 py-3 rounded-lg text-[#6f4e37] font-medium transition-colors duration-200 hover:bg-orange-500 hover:text-white group"
 					>
 						<span class="text-lg">{menu.icon}</span>
