@@ -1,5 +1,5 @@
 <script lang="ts">
-	type Member = { nisn: string; nama: string; kelas: string; program: string };
+	import { MemberStatus, type Member } from '#lib/types/member.ts';
 
 	let { 
 		groupMembers = $bindable<Member[]>([]), 
@@ -8,6 +8,12 @@
 		groupMembers: Member[], 
 		onOpenModal: () => void 
 	} = $props();
+
+	const statusStyles: Record<MemberStatus, string> = {
+		[MemberStatus.Bergabung]: 'bg-green-50 text-green-700 border-green-200',
+		[MemberStatus.Pending]: 'bg-orange-50 text-orange-700 border-orange-200',
+		[MemberStatus.Ditolak]: 'bg-red-50 text-red-700 border-red-200'
+	};
 
 	function removeMember(nisn: string) {
 		groupMembers = groupMembers.filter(m => m.nisn !== nisn);
@@ -27,20 +33,21 @@
 	</div>
 
 	<div class="overflow-x-auto bg-white border border-[#e6d9cc] rounded-lg shadow-sm">
-		<table class="w-full text-sm text-left text-[#6f4e37]">
+		<table class="w-full min-w-[760px] text-sm text-left text-[#6f4e37]">
 			<thead class="text-xs text-[#6f4e37] uppercase bg-[#f4ebe1] border-b border-[#e6d9cc]">
 				<tr>
 					<th class="px-4 py-3">NIS/NISN</th>
 					<th class="px-4 py-3">Nama</th>
 					<th class="px-4 py-3">Kelas</th>
 					<th class="px-4 py-3">Program Keahlian</th>
+					<th class="px-4 py-3">Status</th>
 					<th class="px-4 py-3 text-center">Aksi</th>
 				</tr>
 			</thead>
 			<tbody class="divide-y divide-[#e6d9cc]">
 				{#if groupMembers.length === 0}
 					<tr>
-						<td colspan="5" class="px-4 py-6 text-center text-sm text-[#6f4e37]/50 italic bg-slate-50/50">Belum ada anggota.</td>
+						<td colspan="6" class="px-4 py-6 text-center text-sm text-[#6f4e37]/50 italic bg-slate-50/50">Belum ada anggota.</td>
 					</tr>
 				{:else}
 					{#each groupMembers as member (member.nisn)}
@@ -49,6 +56,11 @@
 							<td class="px-4 py-3">{member.nama}</td>
 							<td class="px-4 py-3">{member.kelas}</td>
 							<td class="px-4 py-3 text-[#6f4e37]/70 truncate max-w-[150px]">{member.program}</td>
+							<td class="px-4 py-3">
+								<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded border {statusStyles[member.status]}">
+									{member.status}
+								</span>
+							</td>
 							<td class="px-4 py-3 text-center">
 								<button onclick={() => removeMember(member.nisn)} class="p-1.5 text-red-500 hover:bg-red-50 rounded-md transition-colors" aria-label="Hapus">
 									<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>

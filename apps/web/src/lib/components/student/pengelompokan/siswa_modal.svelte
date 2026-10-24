@@ -1,5 +1,5 @@
 <script lang="ts">
-	type Member = { nisn: string; nama: string; kelas: string; program: string };
+	import { MemberStatus, type Member, type Student } from '#lib/types/member.ts';
 
 	let { 
 		groupMembers = $bindable<Member[]>([]), 
@@ -7,7 +7,7 @@
 		onClose 
 	}: { 
 		groupMembers: Member[], 
-		availableStudents: Member[], 
+		availableStudents: Student[], 
 		onClose: () => void 
 	} = $props();
 
@@ -19,9 +19,9 @@
 		}
 	});
 
-	function addMember(student: Member) {
+	function addMember(student: Student) {
 		if (!groupMembers.find(m => m.nisn === student.nisn)) {
-			groupMembers = [...groupMembers, student];
+			groupMembers = [...groupMembers, { ...student, status: MemberStatus.Bergabung }];
 		}
 	}
 

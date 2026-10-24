@@ -4,6 +4,7 @@
     import GroupMembers from '#lib/components/student/pengelompokan/member_kelompok.svelte';
     import StudentModal from '#lib/components/student/pengelompokan/siswa_modal.svelte';
     import type { MitraPkl } from '#lib/types/mitra.ts';
+    import type { Member, Student } from '#lib/types/member.ts';
 
 	// Parent State
 	let selectedLocation = $state<MitraPkl | null>(null);
@@ -12,9 +13,9 @@
 	let isModalOpen = $state(false);
 	
 	// Array Member
-	let groupMembers = $state<{ nisn: string; nama: string; kelas: string; program: string }[]>([]);
+	let groupMembers = $state<Member[]>([]);
 
-	let availableStudents = $state([
+	let availableStudents = $state<Student[]>([
 		{ nisn: "0051234567", nama: "Ahmad Fauzi", kelas: "XI RPL 1", program: "Rekayasa Perangkat Lunak" },
 		{ nisn: "0057654321", nama: "Budi Santoso", kelas: "XI TKJ 2", program: "Teknik Komputer dan Jaringan" },
 		{ nisn: "0051122334", nama: "Citra Kirana", kelas: "XI AKL 1", program: "Akuntansi dan Keuangan Lembaga" },
