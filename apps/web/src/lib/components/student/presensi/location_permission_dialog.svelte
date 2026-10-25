@@ -41,7 +41,7 @@
 	onclick={(event) => {
 		if (event.target === dialogEl) tutup();
 	}}
-	class="m-auto w-[calc(100%_-_2rem)] max-w-md overflow-hidden rounded-xl border border-[#e6d9cc] bg-white p-0 text-[#6f4e37] shadow-2xl backdrop:bg-[#6f4e37]/50 backdrop:backdrop-blur-sm"
+	class="m-auto w-[calc(100%_-_2rem)] max-w-md max-h-[90dvh] overflow-hidden rounded-xl border border-[#e6d9cc] bg-white p-0 text-[#6f4e37] shadow-2xl backdrop:bg-[#6f4e37]/50 backdrop:backdrop-blur-sm"
 >
 	<div class="flex flex-col">
 		<div class="flex items-center justify-between border-b border-[#e6d9cc] p-5">

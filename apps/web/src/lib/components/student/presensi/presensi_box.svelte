@@ -120,7 +120,7 @@
 	}
 </script>
 
-<div class="rounded-xl bg-white border border-[#e6d9cc] p-6 shadow-sm">
+<div class="rounded-xl bg-white border border-[#e6d9cc] p-4 shadow-sm sm:p-6">
 	<div class="flex flex-col-reverse justify-between gap-6 sm:flex-row">
 		<div class="flex flex-1 flex-col justify-center">
 			{#if statusTampil}
@@ -174,7 +174,7 @@
 						type="button"
 						onclick={handleHadir}
 						disabled={!bisaHadir}
-						class="rounded-lg bg-orange-500 px-6 py-3 font-semibold text-white transition-colors hover:bg-orange-600 active:scale-95 disabled:cursor-not-allowed disabled:bg-orange-300"
+						class="w-full rounded-lg bg-orange-500 px-6 py-3 font-semibold text-white transition-colors hover:bg-orange-600 active:scale-95 disabled:cursor-not-allowed disabled:bg-orange-300 sm:w-auto"
 					>
 						{memuatLokasi ? 'Mendeteksi lokasi...' : 'Hadir'}
 					</button>
@@ -182,7 +182,7 @@
 						type="button"
 						onclick={() => (dialogIzinSakit = true)}
 						disabled={!presensiState.siap}
-						class="rounded-lg bg-white border border-[#e6d9cc] px-6 py-3 font-semibold text-[#6f4e37] transition-colors hover:bg-[#f4ebe1] active:scale-95 disabled:cursor-not-allowed disabled:opacity-50"
+						class="w-full rounded-lg bg-white border border-[#e6d9cc] px-6 py-3 font-semibold text-[#6f4e37] transition-colors hover:bg-[#f4ebe1] active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
 					>
 						Izin / Sakit
 					</button>

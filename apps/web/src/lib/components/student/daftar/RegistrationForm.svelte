@@ -10,7 +10,7 @@
 	}
 </script>
 
-<article class="w-full max-w-md bg-white rounded-3xl shadow-2xl p-8 lg:p-10 border border-slate-100 space-y-6">
+<article class="w-full max-w-md rounded-3xl border border-slate-100 bg-white p-6 shadow-2xl space-y-6 sm:p-8 lg:p-10">
 	<header class="space-y-1">
 		<h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Daftar Akun</h2>
 		<p class="text-slate-500">Isi data siswa untuk membuat akun baru.</p>

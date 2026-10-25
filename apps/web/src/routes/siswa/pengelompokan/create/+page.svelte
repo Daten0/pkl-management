@@ -68,7 +68,7 @@
 	}
 </script>
 
-<div class="w-full bg-white border border-[#e6d9cc] rounded-xl shadow-sm p-6 flex flex-col gap-6">
+<div class="w-full bg-white border border-[#e6d9cc] rounded-xl shadow-sm p-4 sm:p-6 flex flex-col gap-4 sm:gap-6">
 	<!-- Header Parent -->
 	<div class="border-b border-[#e6d9cc] pb-4">
 		<h1 class="text-xl font-bold text-[#6f4e37]">Form Pengelompokan PKL</h1>
@@ -76,7 +76,7 @@
 	</div>
 
 	<!-- Container Layout Grid -->
-	<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+	<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
 		<!-- Child Component 1 -->
 		<LocationInfo bind:selectedLocation {mitraList} bind:startDate bind:endDate />
 
@@ -86,7 +86,7 @@
 
 	<!-- Action Footer -->
 	<div class="flex justify-end pt-4 border-t border-[#e6d9cc]">
-		<button onclick={handleSave} class="px-6 py-2.5 bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium rounded-lg shadow-sm transition-all focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 flex items-center gap-2">
+		<button onclick={handleSave} class="w-full sm:w-auto justify-center px-6 py-2.5 bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium rounded-lg shadow-sm transition-all focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 flex items-center gap-2">
 			<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
 			Simpan Data
 		</button>

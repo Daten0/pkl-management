@@ -103,9 +103,9 @@
 	onclick={(event) => {
 		if (event.target === dialogEl) tutup();
 	}}
-	class="m-auto w-[calc(100%_-_2rem)] max-w-lg overflow-hidden rounded-xl border border-[#e6d9cc] bg-white p-0 text-[#6f4e37] shadow-2xl backdrop:bg-[#6f4e37]/50 backdrop:backdrop-blur-sm"
+	class="m-auto w-[calc(100%_-_2rem)] max-w-lg max-h-[90dvh] overflow-hidden rounded-xl border border-[#e6d9cc] bg-white p-0 text-[#6f4e37] shadow-2xl backdrop:bg-[#6f4e37]/50 backdrop:backdrop-blur-sm"
 >
-	<div class="flex max-h-[85vh] flex-col">
+	<div class="flex max-h-[90dvh] flex-col">
 		<div class="flex items-center justify-between border-b border-[#e6d9cc] p-5">
 			<h2 id="judul-izin-sakit" class="text-lg font-bold text-[#6f4e37]">Ajukan Izin / Sakit</h2>
 			<button

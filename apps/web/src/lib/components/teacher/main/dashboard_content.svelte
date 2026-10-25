@@ -2,14 +2,14 @@
 <div class="max-w-7xl mx-auto space-y-6">
 	<!-- Header Dashboard -->
 	<div>
-		<h2 class="text-2xl font-bold text-[#6f4e37]">Dashboard Guru Pembimbing</h2>
+		<h2 class="text-xl font-bold text-[#6f4e37] sm:text-2xl">Dashboard Guru Pembimbing</h2>
 		<p class="text-[#8c6b54] text-sm mt-1">Pantau kelompok bimbingan, aktivitas siswa, dan tindak lanjut penilaian PKL.</p>
 	</div>
 
 	<!-- Baris Atas: 2 UI Box Statistik -->
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
 		<!-- Box 1: Total Kelompok PKL -->
-		<div class="bg-white rounded-xl shadow-sm border border-[#e6d9cc] p-5 flex items-center justify-between">
+		<div class="bg-white rounded-xl shadow-sm border border-[#e6d9cc] p-4 sm:p-5 flex items-center justify-between">
 			<div>
 				<p class="text-sm font-medium text-[#8c6b54]">Kelompok Bimbingan (Aktif)</p>
 				<h3 class="text-3xl font-bold text-orange-500 mt-1">4</h3>
@@ -20,7 +20,7 @@
 		</div>
 
 		<!-- Box 2: Total Siswa -->
-		<div class="bg-white rounded-xl shadow-sm border border-[#e6d9cc] p-5 flex items-center justify-between">
+		<div class="bg-white rounded-xl shadow-sm border border-[#e6d9cc] p-4 sm:p-5 flex items-center justify-between">
 			<div>
 				<p class="text-sm font-medium text-[#8c6b54]">Total Siswa Bimbingan</p>
 				<h3 class="text-3xl font-bold text-orange-500 mt-1">16</h3>
@@ -33,12 +33,12 @@
 
 	<!-- Baris Bawah: 4 UI Box Actionable Events -->
 	<!-- Menggunakan grid 2 kolom di layar besar (lg), 1 kolom di layar kecil/medium -->
-	<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+	<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
 		
 		<!-- Box 1: Terbitkan Surat Penugasan -->
-		<div class="bg-white rounded-xl shadow-sm border border-[#e6d9cc] p-5 h-fit flex flex-col">
-			<div class="flex justify-between items-center border-b border-[#e6d9cc] pb-2 mb-4">
-				<h3 class="text-lg font-bold text-orange-500">Penerbitan Surat Penugasan</h3>
+		<div class="bg-white rounded-xl shadow-sm border border-[#e6d9cc] p-4 sm:p-5 h-fit flex flex-col">
+			<div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#e6d9cc] pb-2 mb-4">
+				<h3 class="text-base font-bold text-orange-500 sm:text-lg">Penerbitan Surat Penugasan</h3>
 				<span class="bg-orange-100 text-orange-600 text-xs px-2 py-1 rounded-full font-bold">1 Aksi</span>
 			</div>
 			<ul class="space-y-3 flex-1">
@@ -56,9 +56,9 @@
 		</div>
 
 		<!-- Box 2: Kehadiran / Alpa Siswa -->
-		<div class="bg-white rounded-xl shadow-sm border border-[#e6d9cc] p-5 h-fit flex flex-col">
-			<div class="flex justify-between items-center border-b border-[#e6d9cc] pb-2 mb-4">
-				<h3 class="text-lg font-bold text-red-500">Peringatan: Siswa Alpa (Tanpa Keterangan)</h3>
+		<div class="bg-white rounded-xl shadow-sm border border-[#e6d9cc] p-4 sm:p-5 h-fit flex flex-col">
+			<div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#e6d9cc] pb-2 mb-4">
+				<h3 class="text-base font-bold text-red-500 sm:text-lg">Peringatan: Siswa Alpa (Tanpa Keterangan)</h3>
 				<span class="bg-red-100 text-red-600 text-xs px-2 py-1 rounded-full font-bold">2 Laporan</span>
 			</div>
 			<ul class="space-y-3 flex-1">
@@ -72,7 +72,7 @@
 							<span class="text-xs font-bold text-red-500 bg-red-50 px-2 py-1 rounded">2 Hari Alpa</span>
 						</div>
 					</div>
-					<div class="mt-3 pt-2 border-t border-dashed border-red-100 flex gap-2">
+					<div class="mt-3 pt-2 border-t border-dashed border-red-100 flex flex-wrap gap-2">
 						<button class="bg-white border border-red-300 text-red-600 hover:bg-red-50 text-xs px-3 py-1.5 rounded cursor-pointer transition-colors w-full">Hubungi Siswa</button>
 						<button class="bg-white border border-[#e6d9cc] text-[#6f4e37] hover:bg-gray-50 text-xs px-3 py-1.5 rounded cursor-pointer transition-colors w-full">Hubungi DUDI</button>
 					</div>
@@ -81,9 +81,9 @@
 		</div>
 
 		<!-- Box 3: Izin / Sakit Siswa -->
-		<div class="bg-white rounded-xl shadow-sm border border-[#e6d9cc] p-5 h-fit flex flex-col">
-			<div class="flex justify-between items-center border-b border-[#e6d9cc] pb-2 mb-4">
-				<h3 class="text-lg font-bold text-orange-500">Validasi Izin / Sakit Siswa</h3>
+		<div class="bg-white rounded-xl shadow-sm border border-[#e6d9cc] p-4 sm:p-5 h-fit flex flex-col">
+			<div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#e6d9cc] pb-2 mb-4">
+				<h3 class="text-base font-bold text-orange-500 sm:text-lg">Validasi Izin / Sakit Siswa</h3>
 				<span class="bg-orange-100 text-orange-600 text-xs px-2 py-1 rounded-full font-bold">1 Menunggu</span>
 			</div>
 			<ul class="space-y-3 flex-1">
@@ -96,7 +96,7 @@
 						</div>
 						<span class="text-xl">🤒</span>
 					</div>
-					<div class="mt-3 flex gap-2">
+					<div class="mt-3 flex flex-wrap gap-2">
 						<button class="bg-orange-500 hover:bg-orange-600 text-white text-xs px-3 py-1.5 rounded cursor-pointer transition-colors flex-1">Validasi Izin</button>
 						<button class="bg-white border border-[#e6d9cc] text-[#6f4e37] hover:bg-gray-50 text-xs px-3 py-1.5 rounded cursor-pointer transition-colors flex-1">Lihat Surat</button>
 					</div>
@@ -105,9 +105,9 @@
 		</div>
 
 		<!-- Box 4: Siswa Belum Dinilai -->
-		<div class="bg-white rounded-xl shadow-sm border border-[#e6d9cc] p-5 h-fit flex flex-col">
-			<div class="flex justify-between items-center border-b border-[#e6d9cc] pb-2 mb-4">
-				<h3 class="text-lg font-bold text-orange-500">Siswa Belum Diberikan Penilaian Akhir</h3>
+		<div class="bg-white rounded-xl shadow-sm border border-[#e6d9cc] p-4 sm:p-5 h-fit flex flex-col">
+			<div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#e6d9cc] pb-2 mb-4">
+				<h3 class="text-base font-bold text-orange-500 sm:text-lg">Siswa Belum Diberikan Penilaian Akhir</h3>
 				<span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full font-bold">4 Siswa</span>
 			</div>
 			<ul class="space-y-2 flex-1">

@@ -15,7 +15,7 @@
 	}
 </script>
 
-<div class="bg-slate-50 border border-[#e6d9cc] rounded-lg p-5 flex flex-col gap-5">
+<div class="bg-slate-50 border border-[#e6d9cc] rounded-lg p-4 sm:p-5 flex flex-col gap-5">
 	<h2 class="text-lg font-semibold text-[#6f4e37] flex items-center gap-2">
 		<svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
 		Informasi Mentor PKL
@@ -50,7 +50,7 @@
 		<div class="flex justify-end">
 			<button
 				type="submit"
-				class="inline-flex items-center gap-2 px-5 py-2.5 bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium rounded-lg shadow-sm transition-all focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+				class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-orange-500 px-5 py-2.5 text-sm font-medium text-white shadow-sm transition-all hover:bg-orange-600 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 sm:w-auto"
 			>
 				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
 				Simpan Informasi Mentor

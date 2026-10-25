@@ -1,4 +1,4 @@
-<section class="w-full lg:w-1/2 relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 flex flex-col items-center justify-center px-10 py-16 lg:py-0">
+<section class="relative hidden w-full overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 lg:flex lg:w-1/2 lg:flex-col lg:items-center lg:justify-center lg:px-10">
 	<div class="absolute inset-0 opacity-20">
 		<svg class="w-full h-full" viewBox="0 0 400 400" preserveAspectRatio="none">
 			<defs>
@@ -10,10 +10,10 @@
 		</svg>
 	</div>
 	<div class="relative z-10 flex flex-col items-center text-center">
-		<div class="w-40 h-40 rounded-3xl bg-white/10 backdrop-blur-sm border-2 border-dashed border-white/30 flex items-center justify-center shadow-2xl mb-8 transition hover:scale-105 duration-300">
+		<div class="w-28 h-28 lg:w-40 lg:h-40 rounded-3xl bg-white/10 backdrop-blur-sm border-2 border-dashed border-white/30 flex items-center justify-center shadow-2xl mb-6 lg:mb-8 transition hover:scale-105 duration-300">
 			<span class="text-white/80 text-sm font-medium tracking-wide">Logo akan disematkan di sini</span>
 		</div>
-		<h1 class="text-white text-3xl lg:text-4xl font-extrabold tracking-tight mb-3">PKL Management</h1>
-		<p class="text-slate-300 text-lg">Sistem Manajemen Praktik Kerja Lapangan</p>
+		<h1 class="text-white text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-3">PKL Management</h1>
+		<p class="text-slate-300 text-base lg:text-lg">Sistem Manajemen Praktik Kerja Lapangan</p>
 	</div>
 </section>

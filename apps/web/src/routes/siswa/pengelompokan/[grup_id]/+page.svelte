@@ -53,7 +53,7 @@
 	}
 </script>
 
-<div class="w-full bg-white border border-[#e6d9cc] rounded-xl shadow-sm p-6 flex flex-col gap-6">
+<div class="w-full bg-white border border-[#e6d9cc] rounded-xl shadow-sm p-4 sm:p-6 flex flex-col gap-4 sm:gap-6">
 	<!-- Header Parent -->
 	<div class="border-b border-[#e6d9cc] pb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 		<div>
@@ -74,9 +74,9 @@
 	</div>
 
 	<!-- Layout Container (Dua Kolom) -->
-	<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+	<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 items-start">
 		<!-- Kolom Kiri -->
-		<div class="flex flex-col gap-6">
+		<div class="flex flex-col gap-4 sm:gap-6">
 			<LocationInfo 
 				locationName={groupData.locationName} 
 				address={groupData.address} 
@@ -88,7 +88,7 @@
 		</div>
 
 		<!-- Kolom Kanan -->
-		<div class="flex flex-col gap-6">
+		<div class="flex flex-col gap-4 sm:gap-6">
 			<MemberDetail 
 				members={groupData.members} 
 			/>
@@ -106,7 +106,7 @@
 		<button
 			onclick={handleSubmitRequest}
 			disabled={groupData.status !== 'Belum Dikirim'}
-			class="px-6 py-2.5 bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium rounded-lg shadow-sm transition-all focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+			class="flex w-full items-center justify-center gap-2 rounded-lg bg-orange-500 px-6 py-2.5 text-sm font-medium text-white shadow-sm transition-all hover:bg-orange-600 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
 		>
 			<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
 			Kirim Pengajuan PKL
