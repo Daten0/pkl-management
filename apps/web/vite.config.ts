@@ -11,9 +11,21 @@ export default defineConfig({
 				runes: ({ filename }) =>
 					filename.split(/[/\\]/).includes('node_modules') ? undefined : true
 			},
-			adapter: adapter()
-		})
-		,
+			adapter: adapter(),
+			prerender: {
+				handleUnseenRoutes: ({ routes }) => {
+					// Sertifikat masih memakai data contoh dan aset gambar yang belum tersedia,
+					// jadi route ini belum bisa di-prerender sampai sumber datanya siap.
+					const unexpected = routes.filter(
+						(route) => route !== '/siswa/preview/sertifikat/[id_serti]'
+					);
+
+					if (unexpected.length > 0) {
+						throw new Error(`Rute belum ter-prerender: ${unexpected.join(', ')}`);
+					}
+				}
+			}
+		}),
 		tailwindcss()
 	]
 });

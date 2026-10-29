@@ -15,8 +15,8 @@
 		{ name: 'Pengelompokan', icon: '👥', href: '/siswa/pengelompokan/create' },
 		{ name: 'Presensi', icon: '📝', href: '/siswa/presensi' },
 		{ name: 'Logbook', icon: '📖', href: '/siswa/logbook' },
-		{ name: 'Upload Berkas', icon: '📁', href: '#' },
-		{ name: 'Lihat Nilai', icon: '⭐', href: '#' },
+		{ name: 'Upload Berkas', icon: '📁', href: '/siswa/berkas' },
+		{ name: 'Lihat Hasil PKL', icon: '⭐', href: '/siswa/preview' },
 		{ name: 'Profil Pengguna', icon: '👤', href: '#' }
 	];
 
