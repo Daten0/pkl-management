@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import PreviewDokumen from '#lib/components/nilai/preview_dokumen.svelte';
+	import PreviewDokumen from '#lib/components/student/preview/preview_dokumen.svelte';
 	import type { NilaiDokumen } from '#lib/types/nilai.ts';
 
 	const UUID_V7_RE =

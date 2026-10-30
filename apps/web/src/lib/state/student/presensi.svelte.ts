@@ -16,7 +16,7 @@ function buatDataContoh(): RiwayatPresensi[] {
 			tanggalLabel: tanggalLabelWita(kemarin),
 			jam: '07.20.10',
 			status: StatusPresensi.Hadir,
-			lokasi: { latitude: -5.147665, longitude: 119.432732, accuracy: 12 }
+			lokasi: { latitude: -5.184414, longitude: 119.437608, accuracy: 12 }
 		},
 		{
 			id: 'contoh-sakit',

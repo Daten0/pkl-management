@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import SertifikatHtml from '#lib/components/student/nilai/sertifikat_html.svelte';
+	import SertifikatHtml from '#lib/components/student/preview/sertifikat_html.svelte';
 
 	let userId = $derived(page.params.id_serti ?? '');
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import DocumentCard from '#lib/components/student/nilai/document_card.svelte';
+	import DocumentCard from '#lib/components/student/preview/document_card.svelte';
 	import { CONTOH_ID_NILAI } from '#lib/constants/nilai.ts';
 
 	// Nilai UUIDv7 dari state/database

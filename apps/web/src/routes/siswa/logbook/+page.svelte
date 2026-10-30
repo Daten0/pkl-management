@@ -2,6 +2,7 @@
 	import SearchBar from '#lib/components/student/logbook/search_bar.svelte';
 	import DateFilter from '#lib/components/student/logbook/date_filter.svelte';
 	import ActivityModal from '#lib/components/student/logbook/activity_modal.svelte';
+	import EditActivityModal from '#lib/components/student/logbook/edit_activity_modal.svelte';
 	import LogbookTable from '#lib/components/student/logbook/logbook_table.svelte';
 	import type { LogbookDraft, LogbookEntry, LogbookFilter } from '#lib/types/student/logbook.ts';
 
@@ -9,6 +10,8 @@
 	let searchQuery = $state('');
 	let selectedFilter = $state<LogbookFilter>('Semua');
 	let isModalOpen = $state(false);
+	let isEditModalOpen = $state(false);
+	let selectedLog = $state<LogbookEntry | null>(null);
 
 	// Dummy data awal
 	let logs = $state<LogbookEntry[]>([
@@ -49,7 +52,12 @@
 	}
 
 	function handleEdit(log: LogbookEntry) {
-		alert(`Fitur edit untuk ${log.nama} akan dikembangkan selanjutnya.`);
+		selectedLog = log;
+		isEditModalOpen = true;
+	}
+
+	function handleUpdateActivity(updatedActivity: LogbookEntry) {
+		logs = logs.map((log) => (log.id === updatedActivity.id ? updatedActivity : log));
 	}
 
 	function handleDelete(id: number) {
@@ -110,3 +118,8 @@
 
 <!-- Modal diletakkan di luar struktur grid/box -->
 <ActivityModal bind:isModalOpen onSave={handleSaveActivity} />
+<EditActivityModal
+	bind:isModalOpen={isEditModalOpen}
+	log={selectedLog}
+	onSave={handleUpdateActivity}
+/>

@@ -1,5 +1,10 @@
 <script lang="ts">
 	import type { LogbookDraft, LogbookFormData } from '#lib/types/student/logbook.ts';
+	import {
+		LOGBOOK_IMAGE_ACCEPT,
+		LOGBOOK_IMAGE_ERROR,
+		isValidLogbookImage
+	} from '#lib/utils/student/logbook_image.ts';
 
 	let {
 		isModalOpen = $bindable(),
@@ -14,10 +19,27 @@
 	});
 
 	let fileInput: HTMLInputElement | undefined = $state();
+	let fileError = $state('');
 
 	function handleFileChange(event: Event) {
 		const input = event.currentTarget as HTMLInputElement;
-		formData.dokumentasi = input.files?.[0] ?? null;
+		const file = input.files?.[0] ?? null;
+
+		if (!file) {
+			formData.dokumentasi = null;
+			fileError = '';
+			return;
+		}
+
+		if (!isValidLogbookImage(file)) {
+			formData.dokumentasi = null;
+			fileError = LOGBOOK_IMAGE_ERROR;
+			input.value = '';
+			return;
+		}
+
+		formData.dokumentasi = file;
+		fileError = '';
 	}
 
 	function handleSubmit(event: SubmitEvent) {
@@ -26,6 +48,7 @@
 
 		// Reset form dan tutup modal
 		formData = { nama: '', jam: '', deskripsi: '', dokumentasi: null };
+		fileError = '';
 		if (fileInput) fileInput.value = '';
 		isModalOpen = false;
 	}
@@ -76,14 +99,22 @@
 				</div>
 
 				<div>
-					<label class="mb-1 block text-sm font-medium text-[#6f4e37]" for="file">Dokumentasi (Opsional)</label>
+					<label class="mb-1 block text-sm font-medium text-[#6f4e37]" for="file"
+						>Dokumentasi (JPEG/PNG, Opsional)</label
+					>
 					<input
 						bind:this={fileInput}
 						onchange={handleFileChange}
 						type="file"
 						id="file"
+						accept={LOGBOOK_IMAGE_ACCEPT}
+						aria-invalid={fileError ? 'true' : undefined}
+						aria-describedby={fileError ? 'file-error' : undefined}
 						class="w-full text-sm text-[#6f4e37]/70 file:mr-4 file:rounded-lg file:border-0 file:bg-orange-50 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-orange-700 hover:file:bg-orange-100"
 					/>
+					{#if fileError}
+						<p id="file-error" class="mt-1 text-sm text-red-600" role="alert">{fileError}</p>
+					{/if}
 				</div>
 
 				<div class="mt-6 flex flex-col-reverse gap-2 sm:flex-row sm:justify-end sm:gap-3">
