@@ -17,7 +17,7 @@
 		{ name: 'Logbook', icon: '📖', href: '/siswa/logbook' },
 		{ name: 'Upload Berkas', icon: '📁', href: '/siswa/berkas' },
 		{ name: 'Lihat Hasil PKL', icon: '⭐', href: '/siswa/preview' },
-		{ name: 'Profil Pengguna', icon: '👤', href: '#' }
+		{ name: 'Profil Pengguna', icon: '👤', href: '/siswa/profil' }
 	];
 
 	function handleKeydown(event: KeyboardEvent) {
