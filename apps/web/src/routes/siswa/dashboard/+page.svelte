@@ -1,5 +1,5 @@
 <script lang="ts">
-	import DashboardContent from '#lib/components/student/main/dashboard_content.svelte';
+	import { DashboardContent } from '#lib/features/student/dashboard/index.ts';
 </script>
 
 <!-- Konten ini otomatis dirender di dalam tag <main> pada +layout.svelte -->

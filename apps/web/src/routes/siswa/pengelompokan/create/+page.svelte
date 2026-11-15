@@ -1,10 +1,7 @@
 <script lang="ts">
 
-	import LocationInfo from '#lib/components/student/pengelompokan/location_info.svelte';
-    import GroupMembers from '#lib/components/student/pengelompokan/member_kelompok.svelte';
-    import StudentModal from '#lib/components/student/pengelompokan/siswa_modal.svelte';
-    import type { MitraPkl } from '#lib/types/student/mitra.ts';
-    import type { Member, Student } from '#lib/types/student/member.ts';
+	import { GroupMembers, LocationInfo, StudentModal } from '#lib/features/student/pengelompokan/index.ts';
+	import type { Member, MitraPkl, Student } from '#lib/features/student/pengelompokan/index.ts';
 
 	// Parent State
 	let selectedLocation = $state<MitraPkl | null>(null);

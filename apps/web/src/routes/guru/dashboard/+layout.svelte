@@ -1,13 +1,12 @@
 <script lang="ts">
-	import Sidebar from '#lib/components/teacher/sidebar.svelte';
-	import Header from '#lib/components/teacher/header.svelte';
+	import { Header, Sidebar } from '#lib/features/teacher/layout/index.ts';
 	import Footer from '#lib/components/footer.svelte';
 	import {
 		closeMobileSidebar,
 		mobileSidebarState,
 		sidebarState,
 		toggleSidebar
-	} from '#lib/state/student/sidebar.svelte.ts';
+	} from '#lib/stores/sidebar.svelte.ts';
 
 	let { children } = $props();
 	const toggle = () => toggleSidebar('teacher');

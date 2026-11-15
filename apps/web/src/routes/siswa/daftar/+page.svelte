@@ -1,6 +1,5 @@
 <script lang="ts">
-	import LogoPane from '#lib/components/student/login/LogoPane.svelte';
-	import RegistrationForm from '#lib/components/student/daftar/RegistrationForm.svelte';
+	import { LogoPane, RegistrationForm } from '#lib/features/student/auth/index.ts';
 </script>
 
 <div class="flex min-h-dvh w-full flex-col lg:flex-row">

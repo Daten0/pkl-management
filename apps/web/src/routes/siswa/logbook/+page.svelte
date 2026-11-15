@@ -1,10 +1,12 @@
 <script lang="ts">
-	import SearchBar from '#lib/components/student/logbook/search_bar.svelte';
-	import DateFilter from '#lib/components/student/logbook/date_filter.svelte';
-	import ActivityModal from '#lib/components/student/logbook/activity_modal.svelte';
-	import EditActivityModal from '#lib/components/student/logbook/edit_activity_modal.svelte';
-	import LogbookTable from '#lib/components/student/logbook/logbook_table.svelte';
-	import type { LogbookDraft, LogbookEntry, LogbookFilter } from '#lib/types/student/logbook.ts';
+	import {
+		ActivityModal,
+		DateFilter,
+		EditActivityModal,
+		LogbookTable,
+		SearchBar
+	} from '#lib/features/student/logbook/index.ts';
+	import type { LogbookDraft, LogbookEntry, LogbookFilter } from '#lib/features/student/logbook/index.ts';
 
 	// State Utama
 	let searchQuery = $state('');
