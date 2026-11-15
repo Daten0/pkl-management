@@ -1,6 +1,5 @@
 <script lang="ts">
-	import Header from '#lib/components/student/berkas/header.svelte';
-	import FileUploadZone from '#lib/components/student/berkas/file_upload.svelte';
+	import { FileUploadZone, Header } from '#lib/features/student/berkas/index.ts';
 </script>
 
 <svelte:head>

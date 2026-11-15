@@ -1,8 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import PresensiBox from '#lib/components/student/presensi/presensi_box.svelte';
-	import RiwayatPresensiBox from '#lib/components/student/presensi/riwayat_presensi.svelte';
-	import { muatPresensi, tandaiAlpaHariIni } from '#lib/state/student/presensi.svelte.ts';
+	import {
+		muatPresensi,
+		PresensiBox,
+		RiwayatPresensiBox,
+		tandaiAlpaHariIni
+	} from '#lib/features/student/presensi/index.ts';
 
 	onMount(() => {
 		muatPresensi();

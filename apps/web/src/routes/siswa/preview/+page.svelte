@@ -1,6 +1,5 @@
 <script lang="ts">
-	import DocumentCard from '#lib/components/student/preview/document_card.svelte';
-	import { CONTOH_ID_NILAI } from '#lib/constants/nilai.ts';
+	import { CONTOH_ID_NILAI, DocumentCard } from '#lib/features/student/preview/index.ts';
 
 	// Nilai UUIDv7 dari state/database
 	let idNilai = CONTOH_ID_NILAI;

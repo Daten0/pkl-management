@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state'; // Untuk mengambil [grup_id]
-	import LocationInfo from '#lib/components/student/pengelompokan/detail/location_info.svelte';
-	import MemberDetail from '#lib/components/student/pengelompokan/detail/detail_member.svelte';
-	import TeacherInfo from '#lib/components/student/pengelompokan/detail/teacher_info.svelte';
-	import OtherInfo from '#lib/components/student/pengelompokan/detail/other_info.svelte';
-	import MentorInfo from '#lib/components/student/pengelompokan/detail/mentor_info.svelte';
+	import {
+		DetailLocationInfo as LocationInfo,
+		DetailMember as MemberDetail,
+		DetailMentorInfo as MentorInfo,
+		DetailOtherInfo as OtherInfo,
+		DetailTeacherInfo as TeacherInfo
+	} from '#lib/features/student/pengelompokan/index.ts';
 
 	// Mengambil ID dari params URL
 	let grupId = $derived(page.params.grup_id);
